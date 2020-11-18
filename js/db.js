@@ -1,5 +1,5 @@
 const langEl = document.querySelector(".langWrap");
-const link = document.querySelectorAll("a");
+const link = langEl.querySelectorAll("a");
 const titleEl = document.querySelector(".title");
 const descrEl = document.querySelector(".description");
 const sl = document.querySelector(".selected-lang");
@@ -9,7 +9,7 @@ link.forEach((el) => {
     langEl.querySelector(".active").classList.remove("active");
 	el.classList.add("active");
 	const attr = el.getAttribute("language");
-	sl.classList.add(this.classList); 
+	sl.classList.add(el.classList[0]); 
     sl.textContent = attr;
 
     titleEl.textContent = data[attr].title;
